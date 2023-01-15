@@ -13,7 +13,7 @@ app.use("/", function(){
 
 app.listen(port, async () => {
   try {
-    client = await mongoose.connect("mongodb+srv://mamex:jaksonfafa@cluster0.z65xuf6.mongodb.net/?retryWrites=true&w=majority");
+    client = await mongoose.connect("removed my password for safty");
   
   } catch (error) {
     console.log(error);
