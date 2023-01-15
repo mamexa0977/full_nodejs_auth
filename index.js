@@ -2,14 +2,19 @@ const express = require("express");
 const router = require("./routes/index");
 const mongoose = require("mongoose");
 const app = express();
+const { User } = require("./model/user");
 
 const port = 4000;
 app.use(express.json());
-app.use("/", router);
+app.use("/", function(){
+
+});
+
 
 app.listen(port, async () => {
   try {
-    await mongoose.connect("<YOUR_MONGO_DB_URI_HERE>");
+    client = await mongoose.connect("mongodb+srv://mamex:jaksonfafa@cluster0.z65xuf6.mongodb.net/?retryWrites=true&w=majority");
+  
   } catch (error) {
     console.log(error);
   }
